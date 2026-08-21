@@ -14,12 +14,14 @@ import { useChat } from "@/hooks/use-chat";
 interface Props {
   chatId: string | null;
   currentUserId: string | null;
+  isAIChat: boolean
   replyTo: MessageType | null;
   onCancelReply: () => void;
 }
 const ChatFooter = ({
   chatId,
   currentUserId,
+  isAIChat,
   replyTo,
   onCancelReply,
 }: Props) => {
@@ -70,7 +72,7 @@ const ChatFooter = ({
       replyTo: replyTo,
     };
     //Send Message
-    sendMessage(payload);
+    sendMessage(payload, isAIChat);
 
     onCancelReply();
     handleRemoveImage();

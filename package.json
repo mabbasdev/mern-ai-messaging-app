@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@remixicon/react": "^4.9.0",
+    "streamdown": "^1.6.11"
+  }
+}
